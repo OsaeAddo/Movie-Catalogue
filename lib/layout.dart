@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:movie_catalogue/widgets/leftpane/left_pane_widget.dart';
 
 class AppLayout extends StatefulWidget {
   const AppLayout({super.key});
@@ -25,8 +26,8 @@ class _AppLayoutState extends State<AppLayout> {
             //Left Pane Section
             Container(
               width: 300,
-              child: Column(),
               color: Colors.indigo.withOpacity(0.95),
+              child: LeftPane(mainNavAction: () {}, selected: 0,),
             ),
             //2nd Column for Headers & Main Pane
             Expanded(
