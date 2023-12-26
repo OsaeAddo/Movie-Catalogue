@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:movie_catalogue/widgets/leftpane/left_pane_widget.dart';
 
 class AppLayout extends StatefulWidget {
-  const AppLayout({super.key});
+  const AppLayout({Key? key}) : super(key: key);
 
   @override
-  State<AppLayout> createState() => _AppLayoutState();
+  State<StatefulWidget> createState() => _AppLayoutState();
 }
 
 class _AppLayoutState extends State<AppLayout> {
@@ -27,7 +27,10 @@ class _AppLayoutState extends State<AppLayout> {
             Container(
               width: 300,
               color: Colors.indigo.withOpacity(0.95),
-              child: LeftPane(mainNavAction: () {}, selected: 0,),
+              child: LeftPane(
+                mainNavAction: () {},
+                selected: 0,
+              ),
             ),
             //2nd Column for Headers & Main Pane
             Expanded(
