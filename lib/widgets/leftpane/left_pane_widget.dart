@@ -7,7 +7,7 @@ class LeftPane extends StatelessWidget {
   final Function mainNavAction;
 
   const LeftPane(
-      {Key? key, required this.selected, required this.mainNavAction})
+      {Key? key, required this.selected, required this.mainNavAction,})
       : super(key: key);
 
   //VoidCallbackAction mainNavA;
@@ -35,11 +35,11 @@ class LeftPane extends StatelessWidget {
               height: 50,
             ),
             MainNavItem(
-                "New Releases", Icons.rocket_launch_outlined, false, (){}),
+                "New Releases", Icons.rocket_launch_outlined, false, () {} as VoidCallbackAction),
             MainNavItem(
-                "Most Popular", Icons.emoji_events_outlined, false, () {}),
-            MainNavItem("Recommended", Icons.verified_outlined, false, () {}),
-            MainNavItem("Top Chart", Icons.diamond_outlined, true, () {}),
+                "Most Popular", Icons.emoji_events_outlined, false, () {} as VoidCallbackAction),
+            MainNavItem("Recommended", Icons.verified_outlined, false, () {} as VoidCallbackAction),
+            MainNavItem("Top Chart", Icons.diamond_outlined, true, () {} as VoidCallbackAction),
           ],
         )),
         //Sub Navigation Menu
@@ -47,10 +47,10 @@ class LeftPane extends StatelessWidget {
             child: Column(
           children: [
             SubNavItem("My Collection", 20, Icons.stop_circle_rounded,
-                Icons.arrow_drop_down, false, () {}),
-            SubNavItem("Bookmark", null, null, null, false, () {}),
-            SubNavItem("History", null, null, null, false, () {}),
-            SubNavItem("Subscriptions", null, null, null, false, () {}),
+                Icons.arrow_drop_down, false, () {} as VoidCallbackAction),
+            SubNavItem("Bookmark", null, null, null, false, () {} as VoidCallbackAction),
+            SubNavItem("History", null, null, null, false, () {} as VoidCallbackAction),
+            SubNavItem("Subscriptions", null, null, null, false, () {} as VoidCallbackAction),
           ],
         ))
       ],
